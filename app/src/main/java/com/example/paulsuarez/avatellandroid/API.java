@@ -22,6 +22,9 @@ public class API extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_api);
 
+
+        // just the button for going back home
+
         home = findViewById(R.id.home);
 
         home.setOnClickListener(new View.OnClickListener() {
@@ -31,6 +34,8 @@ public class API extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // displays url to activity view
 
         final TextView mTextView = (TextView) findViewById(R.id.text);
 
@@ -43,7 +48,7 @@ public class API extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
-                        mTextView.setText("Response is: "+ response.substring(0,100));
+                        mTextView.setText("Response is: "+ response.toString());
                     }
                 }, new Response.ErrorListener() {
             @Override
