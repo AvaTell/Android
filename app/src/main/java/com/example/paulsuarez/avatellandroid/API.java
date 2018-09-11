@@ -25,6 +25,15 @@ public class API extends AppCompatActivity {
         setContentView(R.layout.activity_api);
 
 
+
+        String email = getIntent().getStringExtra("ID1");
+        String pass = getIntent().getStringExtra("ID2");
+
+        System.out.println("THIS IS THE EMAIL VARIABLE: " + email);
+        System.out.println("THIS IS THE PASS VARIABLE: " + pass);
+
+
+
         // just the button for going back home
 
         home = findViewById(R.id.home);
@@ -42,9 +51,10 @@ public class API extends AppCompatActivity {
         final TextView mTextView = (TextView) findViewById(R.id.text);
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String email = "%40";
-        String pass = "";
-        String url = "https://www.avatell.net/auth?user="  + email + "&pass=" + pass;
+//        String email = "%40";
+//        String pass = "";
+        String url = "http://www.avatell.net/auth?user="  + email + "&pass=" + pass;
+        System.out.println("THIS IS THE URL FROM USER LOGIN " + url);
 
 //        String encoded = URLEncoder.encode("m   e@site.com");
 
