@@ -14,6 +14,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import java.net.URLEncoder;
+
 public class API extends AppCompatActivity {
     private ImageButton home;
 
@@ -40,7 +42,11 @@ public class API extends AppCompatActivity {
         final TextView mTextView = (TextView) findViewById(R.id.text);
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        String url = "http://www.avatell.net/";
+        String email = "%40";
+        String pass = "";
+        String url = "https://www.avatell.net/auth?user="  + email + "&pass=" + pass;
+
+//        String encoded = URLEncoder.encode("m   e@site.com");
 
         // Request a string response from the provided URL.
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
