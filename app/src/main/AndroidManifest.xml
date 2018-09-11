@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".API" />
-        <activity android:name=".login"></activity>
+        <activity android:name=".login" />
+        <activity android:name=".ResponseAPI"></activity>
     </application>
 
 </manifest>
