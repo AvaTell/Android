@@ -38,11 +38,11 @@ public class ResponseAPI extends AppCompatActivity {
         System.out.println("THIS IS THE storeCountry VARIABLE: " + storeCountry);
         System.out.println("THIS IS THE storeZip VARIABLE: " + storeZip);
 
-        String email = getIntent().getStringExtra("ID1");
-        String pass = getIntent().getStringExtra("ID2");
-
-        System.out.println("*!RESPONSE!* THIS IS THE EMAIL VARIABLE: " + email);
-        System.out.println("*!RESPONSE!* THIS IS THE PASS VARIABLE: " + pass);
+//        String email = getIntent().getStringExtra("ID1");
+//        String pass = getIntent().getStringExtra("ID2");
+//
+//        System.out.println("*!RESPONSE!* THIS IS THE EMAIL VARIABLE: " + email);
+//        System.out.println("*!RESPONSE!* THIS IS THE PASS VARIABLE: " + pass);
 
 
 
