@@ -35,6 +35,10 @@ public class ResponseAPI extends AppCompatActivity {
         String storeCountry = getIntent().getStringExtra("ID3");
         String storeZip = getIntent().getStringExtra("ID4");
 
+        String taxCode = getIntent().getStringExtra("ID5");
+        String description = getIntent().getStringExtra("ID6");
+        String taxZipCode = getIntent().getStringExtra("ID7");
+
         System.out.println("THIS IS THE storeCountry VARIABLE: " + storeCountry);
         System.out.println("THIS IS THE storeZip VARIABLE: " + storeZip);
 
@@ -147,6 +151,45 @@ public class ResponseAPI extends AppCompatActivity {
         // Add the request to the RequestQueue.
         queue.add(stringRequest);
 
+
+
+
+
+
+
+
+        // THIS is where the "Long" form will respond to from API.java's form input
+
+        // displays url to activity view
+
+        final TextView mTextViewLong = (TextView) findViewById(R.id.mTextViewLong);
+
+        RequestQueue queueLong = Volley.newRequestQueue(this);
+
+//        http://localhost:8080/api/query/bytaxcode?taxcode=PC040100&description=clothing&taxzipcode=98026
+
+
+        String urlLong = "http://www.avatell.net/api/query/bytaxcode?taxcode="  + taxCode + "&description=" + description + "&taxzipcode=" + taxZipCode;
+        System.out.println("THIS IS THE URL FROM THE COUNTRY AND ZIP SEARCH " + urlLong);
+
+
+        // Request a string response from the provided URL.
+        StringRequest stringRequestLong = new StringRequest(Request.Method.GET, urlLong,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        // Display the first 500 characters of the response string.
+                        mTextViewLong.setText("SEARCH SUCCESSFUL! Response is: "+ response.toString());
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                mTextViewLong.setText("That didn't work! " + error.getMessage());
+            }
+        });
+
+        // Add the request to the RequestQueue.
+        queueLong.add(stringRequest);
 
 
 

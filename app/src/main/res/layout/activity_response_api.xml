@@ -32,6 +32,16 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home" />
 
+    <TextView
+        android:id="@+id/mTextViewLong"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trying to load data from API..."
+        app:layout_constraintBottom_toTopOf="@+id/country"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home" />
+
 
     <ImageButton
         android:id="@+id/submit2Result"
