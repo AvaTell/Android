@@ -118,9 +118,7 @@ public class API extends AppCompatActivity {
             ;
         };
 
-        //
-        // this is where form request will go for more specific api requests
-        //
+
 
 
         // Add the request to the RequestQueue.
@@ -148,13 +146,51 @@ public class API extends AppCompatActivity {
 
                 System.out.println("THIS IS THE storeCountry VARIABLE: " + storeCountry);
                 System.out.println("THIS IS THE storeZip VARIABLE: " + storeZip);
+
+                EditText taxCodeInput = findViewById(R.id.taxCodeInput);
+                final String taxCode = taxCodeInput.getText().toString();
+
+                EditText descriptionInput = findViewById(R.id.descriptionInput);
+                final String description = descriptionInput.getText().toString();
+
+                EditText taxZipCodeInput = findViewById(R.id.taxZipCodeInput);
+                final String taxZipCode = taxZipCodeInput.getText().toString();
+
                 Intent intent = new Intent(API.this, ResponseAPI.class);
                 intent.putExtra("ID3", storeCountry);
                 intent.putExtra("ID4", storeZip);
                 intent.putExtra("ID1", email);
                 intent.putExtra("ID2", pass);
+
+                intent.putExtra("ID5", taxCode);
+                intent.putExtra("ID6", description);
+                intent.putExtra("ID7", taxZipCode);
+
+
                 startActivity(intent);
             }
         });
+
+
+
+
+
+
+
+
+
+
+
+        //
+        // this is where form request will go for more specific api requests
+        //
+
+
+
+
+
+
+
+
     }
 }
