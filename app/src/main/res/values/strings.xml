@@ -4,6 +4,8 @@
     <string name="password">Password</string>
     <string name="country">Country</string>
     <string name="zip">Zip</string>
+    <string name="welcome_to_avatell">Welcome to AvaTell</string>
+    <string name="tap_below_to_login">Tap the logo to login!</string>
     <string name="taxcode">TaxCode</string>
     <string name="description">Description</string>
     <string name="company_code">Company Code</string>
