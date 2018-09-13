@@ -188,10 +188,11 @@ public class ResponseAPI extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         Gson gson = new Gson();
-                        //TaxRateByTaxCode parsedResponse = gson.fromJson(response, TaxRateByTaxCode.class);
+                        TaxRateByTaxCode parsedResponse = gson.fromJson(response, TaxRateByTaxCode.class);
                         // Display the first 500 characters of the response string.
-                        mTextViewLong.setText(response);
-                        //mTextViewLong.setText("SEARCH SUCCESSFUL! Response is: "+ parsedResponse.toString());
+                        //mTextViewLong.setText(response);
+                        mTextViewLong.setText("SEARCH SUCCESSFUL! \nYour total tax is: " + parsedResponse
+                        .totalTax + "\n Your total taxable amount is " + parsedResponse.totalTaxable + "\n Your ");
                     }
                 }, new Response.ErrorListener() {
             @Override
