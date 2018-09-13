@@ -3,15 +3,15 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="country">Country</string>
-    <string name="zip">Zip</string>
+    <string name="zip">Zip Code</string>
     <string name="welcome_to_avatell">Welcome to AvaTell</string>
     <string name="tap_below_to_login">Tap the logo to login!</string>
     <string name="taxcode">TaxCode</string>
     <string name="description">Description</string>
     <string name="company_code">Company Code</string>
     <string name="customer_code">Customer Code</string>
-    <string name="amount">amount</string>
-    <string name="quantity">quantity</string>
+    <string name="amount">Amount</string>
+    <string name="quantity">Quantity</string>
     <string name="company">Company</string>
     <string name="customer">Customer</string>
 </resources>
