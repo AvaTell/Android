@@ -16,6 +16,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.paulsuarez.avatellandroid.POJO.TaxRateByTaxCode;
+import com.google.gson.Gson;
 
 import java.net.CookieHandler;
 import java.net.CookieManager;
@@ -185,8 +187,11 @@ public class ResponseAPI extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Gson gson = new Gson();
+                        TaxRateByTaxCode parsedResponse = gson.fromJson(response, TaxRateByTaxCode.class);
                         // Display the first 500 characters of the response string.
-                        mTextViewLong.setText("SEARCH SUCCESSFUL! Response is: "+ response.toString());
+                        // mTextViewLong.setText(response);
+                        mTextViewLong.setText("SEARCH SUCCESSFUL! Response is: "+ parsedResponse.toString());
                     }
                 }, new Response.ErrorListener() {
             @Override
