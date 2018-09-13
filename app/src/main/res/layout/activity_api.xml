@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/avatellBackground"
     tools:context=".API">
 
 
@@ -20,21 +21,29 @@
         app:srcCompat="@drawable/avatell2" />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/searchByZipCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trying to load data from API..."
-        app:layout_constraintTop_toBottomOf="@+id/home"
-        app:layout_constraintBottom_toTopOf="@+id/rateByZip"
+        android:layout_marginBottom="10sp"
+        android:layout_marginTop="10sp"
+        android:text="Search For a Tax Rate by Zip Code"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/avatellSplashPageText"
+        app:layout_constraintBottom_toTopOf="@id/rateByZip"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/home" />
+
 
     <LinearLayout
         android:id="@+id/rateByZip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/text">
+        android:padding="5sp"
+        android:layout_marginTop="10sp"
+        app:layout_constraintTop_toBottomOf="@id/searchByZipCode">
 
         <EditText
             android:id="@+id/country"
@@ -42,6 +51,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/country"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="5sp"
+            android:background="@color/avatellSecondaryBackground"
             android:inputType="text" />
 
         <EditText
@@ -50,14 +62,20 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:hint="@string/zip"
+            android:layout_marginRight="10sp"
+            android:background="@color/avatellSecondaryBackground"
             android:inputType="text" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textOr"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fill out the above or below fields and hit submit"
+        android:layout_height="25dp"
+        android:layout_marginTop="10sp"
+        android:text="Search For a Tax Rate by Tax Code"
+        android:textColor="@color/avatellSplashPageText"
+        android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/longForm"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -69,6 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
+        android:layout_marginTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textOr">
@@ -78,6 +97,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/company"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="5sp"
+            android:background="@color/avatellSecondaryBackground"
             android:inputType="text" />
 
         <EditText
@@ -85,13 +108,18 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/customer"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="5sp"
+            android:background="@color/avatellSecondaryBackground"
             android:inputType="text" />
 
         <LinearLayout
             android:id="@+id/zipamtqty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginBottom="5sp">
 
             <EditText
                 android:id="@+id/taxZipCodeInput"
@@ -99,6 +127,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/zip"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/avatellSecondaryBackground"
                 android:inputType="text" />
 
             <EditText
@@ -107,6 +138,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/amount"
+                android:background="@color/avatellSecondaryBackground"
+                android:layout_marginRight="5sp"
                 android:inputType="text" />
 
 
@@ -116,6 +149,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/quantity"
+                android:layout_marginRight="10sp"
+                android:background="@color/avatellSecondaryBackground"
                 android:inputType="text" />
 
         </LinearLayout>
@@ -132,6 +167,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:hint="@string/taxcode"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="5sp"
+                android:background="@color/avatellSecondaryBackground"
                 android:inputType="text" />
 
             <EditText
@@ -140,6 +178,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
                 android:hint="@string/description"
+                android:layout_marginRight="10sp"
+                android:background="@color/avatellSecondaryBackground"
                 android:inputType="text" />
 
         </LinearLayout>
@@ -153,12 +193,10 @@
             android:adjustViewBounds="true"
             android:background="@color/avatellBackground"
             android:scaleType="centerInside"
+            app:layout_constraintTop_toBottomOf="@id/longForm"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:srcCompat="@drawable/avatellsubmit" />
-
-
-
 
 </android.support.constraint.ConstraintLayout>
