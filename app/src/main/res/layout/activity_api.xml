@@ -9,210 +9,167 @@
 
     <ImageButton
         android:id="@+id/home"
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-
+        android:layout_width="wrap_content"
+        android:layout_height="126dp"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerInside"
+        android:background="@color/avatellBackground"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065"
-        app:srcCompat="@drawable/avatellhome" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/avatell2" />
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Trying to load data from API..."
-        app:layout_constraintBottom_toTopOf="@+id/country"
+        app:layout_constraintTop_toBottomOf="@+id/home"
+        app:layout_constraintBottom_toTopOf="@+id/rateByZip"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home" />
+        app:layout_constraintRight_toRightOf="parent" />
 
-    <EditText
-        android:id="@+id/country"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/rateByZip"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:hint="@string/country"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/textOr"
-        app:layout_constraintEnd_toStartOf="@+id/zip"
-        app:layout_constraintHorizontal_bias="0.214"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/zip"
-        app:layout_constraintTop_toBottomOf="@+id/text" />
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/text">
 
-    <EditText
-        android:id="@+id/zip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="120dp"
-        android:hint="@string/zip"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/textOr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toRightOf="@+id/country"
-        app:layout_constraintRight_toRightOf="parent"
+        <EditText
+            android:id="@+id/country"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/country"
+            android:inputType="text" />
 
-        app:layout_constraintTop_toBottomOf="@+id/text"
-
-
-        app:layout_constraintVertical_bias="0.495" />
-
+        <EditText
+            android:id="@+id/zip"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/zip"
+            android:inputType="text" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textOr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Fill out the above or below fields and hit submit"
-        app:layout_constraintBottom_toTopOf="@+id/taxCodeInput"
+        app:layout_constraintBottom_toTopOf="@+id/longForm"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/country" />
+        app:layout_constraintTop_toBottomOf="@+id/rateByZip" />
 
 
-    <!--below is for the new form-->
-
-
-    <EditText
-        android:id="@+id/taxCodeInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:hint="@string/taxcode"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/companyCodeInput"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/descriptionInput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textOr" />
-
-    <EditText
-        android:id="@+id/descriptionInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginStart="20dp"
-        android:hint="@string/description"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/companyCodeInput"
-        app:layout_constraintLeft_toRightOf="@+id/taxCodeInput"
-
-        app:layout_constraintRight_toLeftOf="@+id/taxZipCodeInput"
-        app:layout_constraintStart_toEndOf="@+id/taxCodeInput"
-        app:layout_constraintTop_toBottomOf="@+id/textOr"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/taxZipCodeInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="48dp"
-        android:layout_marginStart="24dp"
-        android:hint="@string/zip"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/companyCodeInput"
-        app:layout_constraintLeft_toRightOf="@+id/descriptionInput"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/descriptionInput"
-        app:layout_constraintTop_toBottomOf="@+id/textOr" />
-
-
-
-    <!--below four are the new feilds-->
-
-    <EditText
-        android:id="@+id/companyCodeInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:hint="@string/company"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/submit2Result"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/customerCodeInput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taxZipCodeInput" />
-
-    <EditText
-        android:id="@+id/customerCodeInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
-        android:hint="@string/customer"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/submit2Result"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintLeft_toRightOf="@+id/companyCodeInput"
-        app:layout_constraintRight_toLeftOf="@+id/amountInput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taxZipCodeInput"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:id="@+id/amountInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="248dp"
-        android:hint="@string/amount"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/submit2Result"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintLeft_toRightOf="@+id/customerCodeInput"
-        app:layout_constraintRight_toLeftOf="@+id/quantityInput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taxZipCodeInput"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <EditText
-        android:id="@+id/quantityInput"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="320dp"
-        android:hint="@string/quantity"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/submit2Result"
-        app:layout_constraintHorizontal_bias="0.177"
-        app:layout_constraintLeft_toRightOf="@+id/amountInput"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taxZipCodeInput"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <!--above four are the new feilds-->
-
-
-
-    <ImageButton
-        android:id="@+id/submit2Result"
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@id/space"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/taxCodeInput"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/avatell2" />
-
-    <android.support.v4.widget.Space
-        android:id="@+id/space"
+    <LinearLayout
+        android:id="@+id/longForm"
         android:layout_width="match_parent"
-        android:layout_height="150sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/textOr">
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/submit2Result" />
+        <EditText
+            android:id="@+id/companyCodeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/company"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/customerCodeInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer"
+            android:inputType="text" />
+
+        <LinearLayout
+            android:id="@+id/zipamtqty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/taxZipCodeInput"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/zip"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/amountInput"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/amount"
+                android:inputType="text" />
+
+
+            <EditText
+                android:id="@+id/quantityInput"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/quantity"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/codesAndDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/taxCodeInput"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="@string/taxcode"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/descriptionInput"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="@string/description"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+
+        <!--above four are the new fields-->
+
+
+        <ImageButton
+            android:id="@+id/submit2Result"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+
+            app:srcCompat="@drawable/avatell2" />
+        <!--app:layout_constraintBottom_toTopOf="@id/space"-->
+
+        <!--<android.support.v4.widget.Space-->
+        <!--android:id="@+id/space"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="150sp"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/submit2Result" />-->
+    </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
