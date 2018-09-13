@@ -7,16 +7,6 @@
     android:background="@color/avatellBackground"
     tools:context=".login">
 
-    <!--<ImageView-->
-
-        <!--android:id="@+id/loginLogo"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="170dp"-->
-        <!--android:src="@drawable/avatell2"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent" />-->
-
 
     <ImageButton
         android:id="@+id/home"
@@ -28,11 +18,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/inputArea"
         app:srcCompat="@drawable/avatell2" />
-        <!--app:layout_constraintVertical_bias="0.065"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.043"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintBottom_toTopOf="@+id/inputEmail"-->
 
     <LinearLayout
         android:id="@+id/inputArea"
@@ -66,13 +51,6 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:padding="5sp" />
-        <!--app:layout_constraintBottom_toTopOf="@+id/submit"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/inputEmail" />-->
 
     </LinearLayout>
 
@@ -88,13 +66,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputArea"
         app:srcCompat="@drawable/avatellsubmit" />
-
-        <!--android:layout_marginTop="10dp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.501"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/inputPassword"-->
-
-
 
 </android.support.constraint.ConstraintLayout>
