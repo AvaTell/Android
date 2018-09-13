@@ -85,7 +85,7 @@ public class API extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
-                        mTextView.setText("LOGIN SUCCESSFUL! Response is: "+ response.toString());
+                        mTextView.setText("LOGIN SUCCESSFUL! Response is: "+ response.substring(0, 10));
                     }
                 },
                 new Response.ErrorListener() {
@@ -156,6 +156,24 @@ public class API extends AppCompatActivity {
                 EditText taxZipCodeInput = findViewById(R.id.taxZipCodeInput);
                 final String taxZipCode = taxZipCodeInput.getText().toString();
 
+
+
+                //
+
+                EditText companyCodeInput = findViewById(R.id.companyCodeInput);
+                final String companyCode = companyCodeInput.getText().toString();
+
+                EditText customerCodeInput = findViewById(R.id.customerCodeInput);
+                final String customerCode = customerCodeInput.getText().toString();
+
+                EditText amountInput = findViewById(R.id.amountInput);
+                final String amount = amountInput.getText().toString();
+
+                EditText quantityInput = findViewById(R.id.quantityInput);
+                final String quantity = quantityInput.getText().toString();
+
+                //
+
                 Intent intent = new Intent(API.this, ResponseAPI.class);
                 intent.putExtra("ID3", storeCountry);
                 intent.putExtra("ID4", storeZip);
@@ -165,6 +183,12 @@ public class API extends AppCompatActivity {
                 intent.putExtra("ID5", taxCode);
                 intent.putExtra("ID6", description);
                 intent.putExtra("ID7", taxZipCode);
+
+                intent.putExtra("ID8", companyCode);
+                intent.putExtra("ID9", customerCode);
+                intent.putExtra("ID10", amount);
+                intent.putExtra("ID11", quantity);
+
 
 
                 startActivity(intent);
