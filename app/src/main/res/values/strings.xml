@@ -4,4 +4,12 @@
     <string name="password">Password</string>
     <string name="country">Country</string>
     <string name="zip">Zip</string>
+    <string name="taxcode">TaxCode</string>
+    <string name="description">Description</string>
+    <string name="company_code">Company Code</string>
+    <string name="customer_code">Customer Code</string>
+    <string name="amount">amount</string>
+    <string name="quantity">quantity</string>
+    <string name="company">Company</string>
+    <string name="customer">Customer</string>
 </resources>

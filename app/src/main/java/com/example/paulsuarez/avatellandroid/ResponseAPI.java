@@ -39,6 +39,11 @@ public class ResponseAPI extends AppCompatActivity {
         String description = getIntent().getStringExtra("ID6");
         String taxZipCode = getIntent().getStringExtra("ID7");
 
+        String companyCode = getIntent().getStringExtra("ID8");
+        String customerCode = getIntent().getStringExtra("ID9");
+        String amount = getIntent().getStringExtra("ID10");
+        String quantity = getIntent().getStringExtra("ID11");
+
         System.out.println("THIS IS THE storeCountry VARIABLE: " + storeCountry);
         System.out.println("THIS IS THE storeZip VARIABLE: " + storeZip);
 
@@ -168,8 +173,10 @@ public class ResponseAPI extends AppCompatActivity {
 
 //        http://localhost:8080/api/query/bytaxcode?taxcode=PC040100&description=clothing&taxzipcode=98026
 
+        // http://www.avatell.net/api/query/bytaxcode?companyCode=SELFEMPLOYED&customerCode=ABC&taxzipcode=98148&taxcode=PC040100&description=clothing&amount=100&quantity=10
 
-        String urlLong = "http://www.avatell.net/api/query/bytaxcode?taxcode="  + taxCode + "&description=" + description + "&taxzipcode=" + taxZipCode;
+
+        String urlLong = "http://www.avatell.net/api/query/bytaxcode?companyCode=" + companyCode + "&customerCode=" + customerCode + "&taxzipcode=" + taxZipCode + "&taxcode="  + taxCode + "&description=" + description + "&amount=" + amount + "&quantity=" + quantity;
         System.out.println("THIS IS THE URL FROM THE COUNTRY AND ZIP SEARCH " + urlLong);
 
 
@@ -189,7 +196,7 @@ public class ResponseAPI extends AppCompatActivity {
         });
 
         // Add the request to the RequestQueue.
-        queueLong.add(stringRequest);
+        queueLong.add(stringRequestLong);
 
 
 
