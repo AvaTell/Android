@@ -14,6 +14,12 @@ public class login extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        Parser parser = new Parser();
+        parser.loadList(this.getApplicationContext());
+        parser.refine("a");
+        parser.refine("ar");
+        parser.refine("art");
+        parser.backSpaceHandler(this.getApplicationContext());
 
         // takes us home
         home = findViewById(R.id.home);
