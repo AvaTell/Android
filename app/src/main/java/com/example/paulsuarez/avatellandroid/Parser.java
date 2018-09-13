@@ -1,5 +1,8 @@
 package com.example.paulsuarez.avatellandroid;
 
+import android.content.Context;
+import android.content.res.AssetManager;
+
 import java.io.InputStream;
 import java.util.LinkedList;
 import java.util.Scanner;
@@ -10,11 +13,24 @@ public class Parser{
     String currSearch = "";
 
     LinkedList<String> currVals = new LinkedList<String>();
-    public LinkedList<String> loadList (){
+
+    public static void main(String[] args, Context context) {
+        Parser parser = new Parser();
+        parser.loadList(context);
+        parser.refine("a");
+        parser.refine("ar");
+        parser.refine("art");
+        System.out.print(parser.currVals);
+    }
+
+    public LinkedList<String> loadList (Context context){
         try {
+
             Pattern p = Pattern.compile("^[A-Z]");
-            ClassLoader classloader = getClass().getClassLoader();
-            InputStream inputStream = classloader.getResourceAsStream("com/example/paulsuarez/avatellandroid/data/Avalara_Good_Service.txt");
+            //AssetManager am = context.getAssets();
+            //InputStream inputStream = am.open("Avalara_Good_Service.txt");
+            InputStream inputStream = context.getResources().openRawResource(R.raw.table);
+
             Scanner scanner = new Scanner(inputStream);
             while(scanner.hasNext()){
                 String currString = scanner.nextLine();
@@ -44,9 +60,9 @@ public class Parser{
         return newVals;
     }
 
-    public LinkedList<String> backSpaceHandler(){
+    public LinkedList<String> backSpaceHandler(Context context){
         this.currSearch = this.currSearch.substring(0,this.currSearch.length()-1);
-        loadList();
+        loadList(context);
         return refine(this.currSearch);
     }
 
