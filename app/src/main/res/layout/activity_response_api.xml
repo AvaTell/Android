@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/avatellBackground"
     tools:context=".ResponseAPI">
 
 
@@ -26,6 +27,7 @@
         android:layout_height="100sp"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
+        android:background="@color/avatellBackground"
         app:layout_constraintBottom_toTopOf="@+id/apiResponse"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -49,6 +51,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Trying to load data from API..."
+        android:textColor="@color/avatellSplashPageText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
         <!--app:layout_constraintTop_toBottomOf="@+id/home" />-->
@@ -60,8 +63,10 @@
             android:layout_height="wrap_content"
             android:text="Trying to load data from API..."
             android:textAlignment="center"
-            android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@id/home"/>
+            android:textColor="@color/avatellSplashPageText"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            app:layout_constraintTop_toBottomOf="@id/home" />
             <!--app:layout_constraintBottom_toTopOf="@+id/submit2Result"-->
             <!--app:layout_constraintLeft_toLeftOf="parent"-->
             <!--app:layout_constraintRight_toRightOf="parent"-->
@@ -71,6 +76,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tax Response"
+            android:textColor="@color/avatellSplashPageText"
             android:textAlignment="center"
             android:textSize="36sp"
             android:textStyle="bold" />
@@ -80,6 +86,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Details:"
+            android:textColor="@color/avatellSplashPageText"
             android:textSize="18sp"
             android:layout_marginLeft="10sp"/>
 
@@ -94,13 +101,15 @@
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:text="placeholder"
+                android:textColor="@color/avatellSplashPageText"
                 android:layout_marginLeft="10sp"/>
             <TextView
                 android:id="@+id/customerCode"
                 android:layout_weight="1"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:text="placeholder"/>
+                android:text="placeholder"
+                android:textColor="@color/avatellSplashPageText" />
 
 
         </LinearLayout>

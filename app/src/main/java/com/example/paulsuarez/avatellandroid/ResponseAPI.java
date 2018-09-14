@@ -192,11 +192,12 @@ public class ResponseAPI extends AppCompatActivity {
                         TaxRateByTaxCode parsedResponse = gson.fromJson(response, TaxRateByTaxCode.class);
                         // Display the first 500 characters of the response string.
                         //mTextViewLong.setText(response);
-                        mTextViewLong.setText("Your total tax is:");
+                        mTextViewLong.setText("Your total tax rate is:");
 
 //                                + parsedResponse
 //                        .totalTax + "\n Your total taxable amount is " + parsedResponse.totalTaxable + "\n Your ");
-                        mTotalTaxResponse.setText(""+parsedResponse.totalTax);
+                        mTotalTaxResponse.setText(parsedResponse.totalTax + "%");
+
 
                     }
                 }, new Response.ErrorListener() {
