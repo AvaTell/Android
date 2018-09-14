@@ -177,8 +177,7 @@ public class ResponseAPI extends AppCompatActivity {
         final TextView mCurrencyCode = findViewById(R.id.currencyCode);
         final TextView mOrderAmount = findViewById(R.id.orderAmount);
         final TextView mExemptAmount = findViewById(R.id.exemptAmount);
-        final TextView mTaxableAmount = findViewById(R.id.taxableAmount
-        );
+        final TextView mTaxableAmount = findViewById(R.id.taxableAmount);
 
         RequestQueue queueLong = Volley.newRequestQueue(this);
 

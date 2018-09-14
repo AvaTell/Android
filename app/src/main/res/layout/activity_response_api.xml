@@ -8,23 +8,11 @@
     tools:context=".ResponseAPI">
 
 
-    <!--<ImageView-->
-        <!--android:id="@+id/home"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="100sp"-->
-        <!--android:adjustViewBounds="true"-->
-        <!--android:background="@color/avatellBackground"-->
-        <!--android:scaleType="centerInside"-->
-        <!--app:layout_constraintLeft_toLeftOf="parent"-->
-        <!--app:layout_constraintRight_toRightOf="parent"-->
-        <!--app:layout_constraintTop_toTopOf="parent"-->
-    <!--app:layout_constraintBottom_toTopOf="@+id/mTextView"-->
-    <!--app:srcCompat="@drawable/avatell2" />-->
 
     <ImageButton
         android:id="@+id/home"
         android:layout_width="wrap_content"
-        android:layout_height="100sp"
+        android:layout_height="150sp"
         android:adjustViewBounds="true"
         android:scaleType="centerInside"
         android:background="@color/avatellBackground"
@@ -33,16 +21,13 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:srcCompat="@drawable/avatell2" />
-        <!--app:layout_constraintVertical_bias="0.065"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.043"-->
 
     <LinearLayout
         android:id="@+id/apiResponse"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="15sp"
         app:layout_constraintTop_toBottomOf="@id/home">
 
     <TextView
@@ -67,47 +52,51 @@
             android:textSize="20sp"
             android:textStyle="italic"
             app:layout_constraintTop_toBottomOf="@id/home" />
-            <!--app:layout_constraintBottom_toTopOf="@+id/submit2Result"-->
-            <!--app:layout_constraintLeft_toLeftOf="parent"-->
-            <!--app:layout_constraintRight_toRightOf="parent"-->
-            <!--app:layout_constraintTop_toBottomOf="@+id/mTextView" />-->
+
         <TextView
             android:id="@+id/totalTaxResponse"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
             android:text="Tax Response"
-            android:textColor="@color/avatellSplashPageText"
             android:textAlignment="center"
-            android:textSize="36sp"
+            android:textColor="@color/avatellSplashPageText"
+            android:textSize="44sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/details"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:layout_marginLeft="10sp"
             android:text="Search Details:"
             android:textColor="@color/avatellSplashPageText"
-            android:textSize="18sp"
-            android:layout_marginLeft="10sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/detailsCustomer"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+
             <TextView
-                android:layout_weight="1"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_weight="1"
                 android:text="Customer"
-                android:textColor="@color/avatellSplashPageText"
-                android:layout_marginLeft="10sp"/>
+                android:textSize="18sp"
+                android:textColor="@color/avatellSplashPageText" />
             <TextView
                 android:id="@+id/customerCode"
                 android:layout_weight="1"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:text="Customer"
+                android:textSize="18sp"
                 android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
 
@@ -115,12 +104,14 @@
             android:id="@+id/detailsCurrency"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
             <TextView
                 android:layout_weight="1"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:text="Currency"
+                android:textSize="18sp"
                 android:textColor="@color/avatellSplashPageText"
                 android:layout_marginLeft="10sp"/>
             <TextView
@@ -129,6 +120,7 @@
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:text="Currency"
+                android:textSize="18sp"
                 android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
 
@@ -136,83 +128,89 @@
             android:id="@+id/detailsAmout"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="0sp"
-                android:layout_height="wrap_content"
-                android:text="Order Amount"
-                android:textColor="@color/avatellSplashPageText"
-                android:layout_marginLeft="10sp"/>
-            <TextView
-                android:id="@+id/orderAmount"
-                android:layout_weight="1"
-                android:layout_width="0sp"
-                android:layout_height="wrap_content"
-                android:text="Order Amount"
-                android:textColor="@color/avatellSplashPageText" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Order Amount"
+            android:textSize="18sp"
+            android:textColor="@color/avatellSplashPageText"
+            android:layout_marginLeft="10sp"/>
+        <TextView
+            android:id="@+id/orderAmount"
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Order Amount"
+            android:textSize="18sp"
+            android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/detailsExempt"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="0sp"
-                android:layout_height="wrap_content"
-                android:text="Exempt Amount"
-                android:textColor="@color/avatellSplashPageText"
-                android:layout_marginLeft="10sp"/>
-            <TextView
-                android:id="@+id/exemptAmount"
-                android:layout_weight="1"
-                android:layout_width="0sp"
-                android:layout_height="wrap_content"
-                android:text="Exempt Amount"
-                android:textColor="@color/avatellSplashPageText" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Exempt Amount"
+            android:textSize="18sp"
+            android:textColor="@color/avatellSplashPageText"
+            android:layout_marginLeft="10sp"/>
+        <TextView
+            android:id="@+id/exemptAmount"
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Exempt Amount"
+            android:textSize="18sp"
+            android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/detailsTaxable"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="0sp"
-                android:layout_height="wrap_content"
-                android:text="Taxable Amount"
-                android:textColor="@color/avatellSplashPageText"
-                android:layout_marginLeft="10sp"/>
-            <TextView
-                android:id="@+id/taxableAmount"
-                android:layout_weight="1"
-                android:layout_width="0sp"
-                android:layout_height="wrap_content"
-                android:text="Taxable Amount"
-                android:textColor="@color/avatellSplashPageText" />
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5sp">
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Taxable Amount"
+            android:textSize="18sp"
+            android:textColor="@color/avatellSplashPageText"
+            android:layout_marginLeft="10sp"/>
+        <TextView
+            android:id="@+id/taxableAmount"
+            android:layout_weight="1"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:text="Taxable Amount"
+            android:textSize="18sp"
+            android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
-
 
 
     </LinearLayout>
 
     <ImageButton
-        android:id="@+id/submit2Result"
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-
+        android:id="@+id/goBackToSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="60sp"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
+        android:scaleType="centerInside"
+        android:background="@color/avatellBackground"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/apiResponse"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/avatell2" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/avatellgoback" />
 
 
 
