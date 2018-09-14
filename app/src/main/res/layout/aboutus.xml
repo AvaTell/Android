@@ -52,6 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5sp"
+                android:padding="5sp"
                 android:background="@color/avatellSecondaryBackground">
 
                 <TextView
@@ -65,18 +66,21 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/github"
-                        android:layout_marginRight="2sp"
-                        android:tag="https://github.com/spinaltaper" />
+                <ImageView
+                    android:id="@+id/panosGitHub"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="2sp"
+                    android:src="@drawable/github"
+                    android:tag="https://github.com/spinaltaper" />
 
-                    <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:src="@drawable/linkedin"
-                        android:tag="https://www.linkedin.com/in/panos-kumasaka/" />
+
+                <ImageView
+                    android:id="@+id/panosLinkedIn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/linkedin"
+                    android:tag="https://www.linkedin.com/in/panos-kumasaka/" />
 
             </LinearLayout>
 
@@ -102,6 +106,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5sp"
+                android:padding="5sp"
                 android:background="@color/avatellSecondaryBackground">
 
                 <TextView
@@ -116,15 +121,17 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:id="@+id/paulGitHub"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/github"
                     android:layout_marginRight="2sp"
                     android:tag="https://github.com/PaulSuarez1" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:id="@+id/paulLinkedIn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/linkedin"
                     android:tag="https://www.linkedin.com/in/paulsuarezsales/" />
 
@@ -152,6 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5sp"
+                android:padding="5sp"
                 android:background="@color/avatellSecondaryBackground">
 
                 <TextView
@@ -166,15 +174,17 @@
                     android:textStyle="bold" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:id="@+id/amyGitHub"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/github"
                     android:layout_marginRight="2sp"
                     android:tag="https://github.com/AmyCohen" />
 
                 <ImageView
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:id="@+id/amyLinkedIn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
                     android:src="@drawable/linkedin"
                     android:tag="https://www.linkedin.com/in/amyvcohen/" />
 
