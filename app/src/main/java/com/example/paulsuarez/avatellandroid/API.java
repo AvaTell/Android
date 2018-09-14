@@ -85,13 +85,13 @@ public class API extends AppCompatActivity {
                     @Override
                     public void onResponse(String response) {
                         // Display the first 500 characters of the response string.
-                        mTextView.setText("LOGIN SUCCESSFUL! Response is: "+ response.substring(0, 10));
+//                        mTextView.setText("LOGIN SUCCESSFUL! Response is: " + response.substring(0, 10));
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        mTextView.setText("That didn't work! " + error.getMessage());
+//                        mTextView.setText("That didn't work! " + error.getMessage());
                     }
                 }) {
 
