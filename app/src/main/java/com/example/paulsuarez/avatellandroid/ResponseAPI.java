@@ -16,11 +16,13 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.paulsuarez.avatellandroid.POJO.TaxCodeSummary;
 import com.example.paulsuarez.avatellandroid.POJO.TaxRateByTaxCode;
 import com.google.gson.Gson;
 
 import java.net.CookieHandler;
 import java.net.CookieManager;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -171,6 +173,12 @@ public class ResponseAPI extends AppCompatActivity {
 
         final TextView mTextViewLong = findViewById(R.id.mTextViewLong);
         final TextView mTotalTaxResponse = findViewById(R.id.totalTaxResponse);
+        final TextView mCustomerCode = findViewById(R.id.customerCode);
+        final TextView mCurrencyCode = findViewById(R.id.currencyCode);
+        final TextView mOrderAmount = findViewById(R.id.orderAmount);
+        final TextView mExemptAmount = findViewById(R.id.exemptAmount);
+        final TextView mTaxableAmount = findViewById(R.id.taxableAmount
+        );
 
         RequestQueue queueLong = Volley.newRequestQueue(this);
 
@@ -190,13 +198,18 @@ public class ResponseAPI extends AppCompatActivity {
                     public void onResponse(String response) {
                         Gson gson = new Gson();
                         TaxRateByTaxCode parsedResponse = gson.fromJson(response, TaxRateByTaxCode.class);
+
                         // Display the first 500 characters of the response string.
                         //mTextViewLong.setText(response);
                         mTextViewLong.setText("Your total tax rate is:");
-
-//                                + parsedResponse
-//                        .totalTax + "\n Your total taxable amount is " + parsedResponse.totalTaxable + "\n Your ");
                         mTotalTaxResponse.setText(parsedResponse.totalTax + "%");
+
+                        //Setting up Detail area of response
+                        mCustomerCode.setText(parsedResponse.customerCode);
+                        mCurrencyCode.setText(parsedResponse.currencyCode);
+                        mOrderAmount.setText("$" + parsedResponse.totalAmount);
+                        mExemptAmount.setText("$" + parsedResponse.totalExempt);
+                        mTaxableAmount.setText("$" + parsedResponse.totalTaxable);
 
 
                     }
