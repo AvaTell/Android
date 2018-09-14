@@ -169,7 +169,8 @@ public class ResponseAPI extends AppCompatActivity {
 
         // displays url to activity view
 
-        final TextView mTextViewLong = (TextView) findViewById(R.id.mTextViewLong);
+        final TextView mTextViewLong = findViewById(R.id.mTextViewLong);
+        final TextView mTotalTaxResponse = findViewById(R.id.totalTaxResponse);
 
         RequestQueue queueLong = Volley.newRequestQueue(this);
 
@@ -191,8 +192,12 @@ public class ResponseAPI extends AppCompatActivity {
                         TaxRateByTaxCode parsedResponse = gson.fromJson(response, TaxRateByTaxCode.class);
                         // Display the first 500 characters of the response string.
                         //mTextViewLong.setText(response);
-                        mTextViewLong.setText("SEARCH SUCCESSFUL! \nYour total tax is: " + parsedResponse
-                        .totalTax + "\n Your total taxable amount is " + parsedResponse.totalTaxable + "\n Your ");
+                        mTextViewLong.setText("Your total tax is:");
+
+//                                + parsedResponse
+//                        .totalTax + "\n Your total taxable amount is " + parsedResponse.totalTaxable + "\n Your ");
+                        mTotalTaxResponse.setText(""+parsedResponse.totalTax);
+
                     }
                 }, new Response.ErrorListener() {
             @Override

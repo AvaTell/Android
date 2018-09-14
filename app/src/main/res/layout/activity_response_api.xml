@@ -7,20 +7,41 @@
     tools:context=".ResponseAPI">
 
 
+    <!--<ImageView-->
+        <!--android:id="@+id/home"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="100sp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:background="@color/avatellBackground"-->
+        <!--android:scaleType="centerInside"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/mTextView"-->
+    <!--app:srcCompat="@drawable/avatell2" />-->
+
     <ImageButton
         android:id="@+id/home"
-        android:layout_width="58dp"
-        android:layout_height="58dp"
-
+        android:layout_width="wrap_content"
+        android:layout_height="100sp"
         android:adjustViewBounds="true"
-        android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/mTextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.043"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toTopOf="@+id/apiResponse"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.065"
-        app:srcCompat="@drawable/avatellhome" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:srcCompat="@drawable/avatell2" />
+        <!--app:layout_constraintVertical_bias="0.065"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.043"-->
+
+    <LinearLayout
+        android:id="@+id/apiResponse"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/home">
 
     <TextView
         android:visibility="gone"
@@ -28,21 +49,64 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Trying to load data from API..."
-        app:layout_constraintBottom_toTopOf="@+id/mTextViewLong"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home" />
+        app:layout_constraintRight_toRightOf="parent" />
+        <!--app:layout_constraintTop_toBottomOf="@+id/home" />-->
 
-    <TextView
-        android:id="@+id/mTextViewLong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Trying to load data from API..."
-        app:layout_constraintBottom_toTopOf="@+id/submit2Result"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mTextView" />
 
+        <TextView
+            android:id="@+id/mTextViewLong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Trying to load data from API..."
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@id/home"/>
+            <!--app:layout_constraintBottom_toTopOf="@+id/submit2Result"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/mTextView" />-->
+        <TextView
+            android:id="@+id/totalTaxResponse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tax Response"
+            android:textAlignment="center"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Details:"
+            android:textSize="18sp"
+            android:layout_marginLeft="10sp"/>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:text="placeholder"
+                android:layout_marginLeft="10sp"/>
+            <TextView
+                android:id="@+id/customerCode"
+                android:layout_weight="1"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:text="placeholder"/>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/submit2Result"
@@ -55,7 +119,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mTextViewLong"
+        app:layout_constraintTop_toBottomOf="@+id/apiResponse"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/avatell2" />
 
