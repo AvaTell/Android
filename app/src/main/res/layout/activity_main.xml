@@ -7,17 +7,36 @@
     android:background="@color/avatellBackground"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/aboutUs"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/avatellBackground"
-        android:text="About Us"
-        android:textAlignment="textStart"
-        android:textColor="@color/avatellSplashPageText"
-        android:textSize="12sp"
-        android:layout_marginLeft="10sp"/>
+        android:layout_height="wrap_content">
 
+        <Button
+            android:id="@+id/aboutUs"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_weight="1"
+            android:background="@color/avatellBackground"
+            android:text="About Us"
+            android:textAlignment="textStart"
+            android:textColor="@color/avatellSplashPageText"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/logOut"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1"
+            android:background="@color/avatellBackground"
+            android:text="Log Out"
+            android:textAlignment="textEnd"
+            android:textColor="@color/avatellSplashPageText"
+            android:textSize="18sp" />
+
+    </LinearLayout>
     <TextView
         android:id="@+id/textView"
         android:layout_width="500dp"
