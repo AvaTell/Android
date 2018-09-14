@@ -3,8 +3,12 @@ package com.example.paulsuarez.avatellandroid;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -30,6 +34,7 @@ import java.net.HttpCookie;
 import java.net.URI;
 import java.net.URLEncoder;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
@@ -45,10 +50,11 @@ public class API extends AppCompatActivity {
 
         final String email = getIntent().getStringExtra("ID1");
         final String pass = getIntent().getStringExtra("ID2");
+        final Parser parser = new Parser();
+        parser.loadList(getApplicationContext());
 
         System.out.println("THIS IS THE EMAIL VARIABLE: " + email);
         System.out.println("THIS IS THE PASS VARIABLE: " + pass);
-
 
 
         // just the button for going back home
@@ -62,6 +68,15 @@ public class API extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        //Credit to team 3
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line, parser.loadList(getApplicationContext()));
+        final AutoCompleteTextView taxCodeInput = findViewById(R.id.taxCodeInput);
+
+        taxCodeInput.setAdapter(adapter);
 
         // displays url to activity view
 
@@ -147,8 +162,7 @@ public class API extends AppCompatActivity {
                 System.out.println("THIS IS THE storeCountry VARIABLE: " + storeCountry);
                 System.out.println("THIS IS THE storeZip VARIABLE: " + storeZip);
 
-                EditText taxCodeInput = findViewById(R.id.taxCodeInput);
-                final String taxCode = taxCodeInput.getText().toString();
+                String taxCode = taxCodeInput.getText().toString();
 
                 EditText descriptionInput = findViewById(R.id.descriptionInput);
                 final String description = descriptionInput.getText().toString();
@@ -180,6 +194,8 @@ public class API extends AppCompatActivity {
                 intent.putExtra("ID1", email);
                 intent.putExtra("ID2", pass);
 
+                taxCode = taxCode.substring(0,taxCode.indexOf(","));
+
                 intent.putExtra("ID5", taxCode);
                 intent.putExtra("ID6", description);
                 intent.putExtra("ID7", taxZipCode);
@@ -195,26 +211,9 @@ public class API extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
         //
         // this is where form request will go for more specific api requests
         //
-
-
-
-
-
-
-
 
     }
 }
