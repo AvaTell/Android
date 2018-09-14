@@ -29,6 +29,7 @@ import java.util.Map;
 public class ResponseAPI extends AppCompatActivity {
 
     private ImageButton home;
+    private ImageButton searchAgain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +67,19 @@ public class ResponseAPI extends AppCompatActivity {
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(ResponseAPI.this, MainActivity.class);
+                Intent intent = new Intent(ResponseAPI.this, MainActivity
+                        .class);
+                startActivity(intent);
+            }
+        });
+
+        searchAgain = findViewById(R.id.goBackToSearch);
+
+        searchAgain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(ResponseAPI.this, API.class);
                 startActivity(intent);
             }
         });
@@ -178,6 +191,7 @@ public class ResponseAPI extends AppCompatActivity {
         final TextView mOrderAmount = findViewById(R.id.orderAmount);
         final TextView mExemptAmount = findViewById(R.id.exemptAmount);
         final TextView mTaxableAmount = findViewById(R.id.taxableAmount);
+
 
         RequestQueue queueLong = Volley.newRequestQueue(this);
 
