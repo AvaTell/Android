@@ -41,7 +41,7 @@
             android:background="@color/avatellSecondaryBackground"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:padding="5sp" />
+            android:padding="10sp" />
 
         <EditText
             android:id="@+id/inputPassword"
@@ -50,7 +50,7 @@
             android:background="@color/avatellSecondaryBackground"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:padding="5sp" />
+            android:padding="10sp" />
 
     </LinearLayout>
 

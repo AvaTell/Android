@@ -52,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5sp"
-                android:padding="5sp"
+                android:padding="10sp"
                 android:background="@color/avatellSecondaryBackground">
 
                 <TextView
@@ -63,14 +63,14 @@
                     android:text="@string/panos"
                     android:textAlignment="textStart"
                     android:textColor="@color/avatellBackground"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
                     android:id="@+id/panosGitHub"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
-                    android:layout_marginRight="2sp"
+                    android:layout_marginRight="5sp"
                     android:src="@drawable/github"
                     android:tag="https://github.com/spinaltaper" />
 
@@ -89,7 +89,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/panos_profile"
                 android:textAlignment="textStart"
-                android:textColor="@color/avatellSplashPageText" />
+                android:textColor="@color/avatellSplashPageText"
+                android:textSize="18sp" />
         </LinearLayout>
 
 
@@ -106,7 +107,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5sp"
-                android:padding="5sp"
+                android:padding="10sp"
                 android:background="@color/avatellSecondaryBackground">
 
                 <TextView
@@ -117,7 +118,7 @@
                     android:text="@string/paul"
                     android:textAlignment="textStart"
                     android:textColor="@color/avatellBackground"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -125,7 +126,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/github"
-                    android:layout_marginRight="2sp"
+                    android:layout_marginRight="5sp"
                     android:tag="https://github.com/PaulSuarez1" />
 
                 <ImageView
@@ -142,7 +143,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/paul_profile"
                 android:textAlignment="textStart"
-                android:textColor="@color/avatellSplashPageText" />
+                android:textColor="@color/avatellSplashPageText"
+                android:textSize="18sp" />
         </LinearLayout>
 
 
@@ -159,7 +161,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5sp"
-                android:padding="5sp"
+                android:padding="10sp"
                 android:background="@color/avatellSecondaryBackground">
 
                 <TextView
@@ -170,7 +172,7 @@
                     android:text="@string/amy"
                     android:textAlignment="textStart"
                     android:textColor="@color/avatellBackground"
-                    android:textSize="18sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <ImageView
@@ -178,7 +180,7 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:src="@drawable/github"
-                    android:layout_marginRight="2sp"
+                    android:layout_marginRight="5sp"
                     android:tag="https://github.com/AmyCohen" />
 
                 <ImageView
@@ -195,7 +197,8 @@
                 android:layout_height="wrap_content"
                 android:text="@string/amy_profile"
                 android:textAlignment="textStart"
-                android:textColor="@color/avatellSplashPageText" />
+                android:textColor="@color/avatellSplashPageText"
+                android:textSize="18sp" />
         </LinearLayout>
 
         </LinearLayout>
