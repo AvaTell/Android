@@ -78,8 +78,11 @@ public class ResponseAPI extends AppCompatActivity {
         searchAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                String email = getIntent().getStringExtra("ID1");
+                String password = getIntent().getStringExtra("ID2");
                 Intent intent = new Intent(ResponseAPI.this, API.class);
+                intent.putExtra("ID1",email);
+                intent.putExtra("ID2",password);
                 startActivity(intent);
             }
         });
