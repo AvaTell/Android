@@ -15,4 +15,10 @@
     <string name="company">Company</string>
     <string name="customer">Customer</string>
     <string name="fill_out_the_above_or_below_fields_and_hit_submit">Fill out the above or below fields and hit submit</string>
+    <string name="panos">Panos</string>
+    <string name="paul">Paul</string>
+    <string name="amy">Amy Cohen</string>
+    <string name="amy_profile">I am a Java developer and a passionate team leader. With a background in physical product design, management, and customer service, I excel at process and organization. Combined with these skills, I create code that delivers brand promises.</string>
+    <string name="panos_profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </string>
+    <string name="paul_profile">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </string>
 </resources>
