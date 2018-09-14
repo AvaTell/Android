@@ -45,6 +45,8 @@
 
 
     <TextView
+        android:visibility="gone"
+
         android:id="@+id/searchByZipCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -60,7 +62,9 @@
         app:layout_constraintTop_toBottomOf="@id/mTextView" />
 
 
+    <!--// this is for the first form (country zip)-->
     <LinearLayout
+        android:visibility="gone"
         android:id="@+id/rateByZip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,6 +94,7 @@
             android:background="@color/avatellSecondaryBackground"
             android:inputType="text" />
     </LinearLayout>
+    <!--above is first form-->
 
     <TextView
         android:id="@+id/textOr"
@@ -120,6 +125,7 @@
             android:id="@+id/companyCodeInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="SELFEMPLOYED"
             android:hint="@string/company"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
@@ -131,6 +137,7 @@
             android:id="@+id/customerCodeInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:text="ABC"
             android:hint="@string/customer"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
@@ -150,6 +157,7 @@
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="98125"
                 android:hint="@string/zip"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="5sp"
@@ -161,6 +169,7 @@
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="100"
                 android:hint="@string/amount"
                 android:background="@color/avatellSecondaryBackground"
                 android:layout_marginRight="5sp"
@@ -172,6 +181,7 @@
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="100"
                 android:hint="@string/quantity"
                 android:layout_marginRight="10sp"
                 android:background="@color/avatellSecondaryBackground"
@@ -190,6 +200,7 @@
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:text="PC040100"
                 android:hint="@string/taxcode"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="5sp"
@@ -201,6 +212,7 @@
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
                 android:layout_weight="2"
+                android:text="clothing"
                 android:hint="@string/description"
                 android:layout_marginRight="10sp"
                 android:background="@color/avatellSecondaryBackground"

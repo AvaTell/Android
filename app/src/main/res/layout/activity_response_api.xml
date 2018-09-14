@@ -14,7 +14,7 @@
 
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/text"
+        app:layout_constraintBottom_toTopOf="@+id/mTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
@@ -23,11 +23,12 @@
         app:srcCompat="@drawable/avatellhome" />
 
     <TextView
-        android:id="@+id/text"
+        android:visibility="gone"
+        android:id="@+id/mTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Trying to load data from API..."
-        app:layout_constraintBottom_toTopOf="@+id/submit2Result"
+        app:layout_constraintBottom_toTopOf="@+id/mTextViewLong"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/home" />
@@ -37,10 +38,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Trying to load data from API..."
-        app:layout_constraintBottom_toTopOf="@+id/country"
+        app:layout_constraintBottom_toTopOf="@+id/submit2Result"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home" />
+        app:layout_constraintTop_toBottomOf="@+id/mTextView" />
 
 
     <ImageButton
@@ -54,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text"
+        app:layout_constraintTop_toBottomOf="@+id/mTextViewLong"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/avatell2" />
 

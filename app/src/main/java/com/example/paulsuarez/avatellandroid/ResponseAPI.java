@@ -129,7 +129,7 @@ public class ResponseAPI extends AppCompatActivity {
 
         // displays url to activity view
 
-        final TextView mTextView = (TextView) findViewById(R.id.text);
+        final TextView mTextView = (TextView) findViewById(R.id.mTextView);
 
         RequestQueue queue = Volley.newRequestQueue(this);
 
