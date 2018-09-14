@@ -35,7 +35,7 @@
         android:id="@+id/mTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trying to load data from API..."
+        android:text="@string/trying_to_load_data_from_api"
         android:textColor="@color/avatellSplashPageText"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
@@ -46,7 +46,7 @@
             android:id="@+id/mTextViewLong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Trying to load data from API..."
+            android:text="@string/trying_to_load_data_from_api"
             android:textAlignment="center"
             android:textColor="@color/avatellSplashPageText"
             android:textSize="20sp"
@@ -58,7 +58,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20sp"
-            android:text="Tax Response"
+            android:text="Tax Rate"
             android:textAlignment="center"
             android:textColor="@color/avatellSplashPageText"
             android:textSize="44sp"
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="10sp"
             android:layout_marginLeft="10sp"
-            android:text="Search Details:"
+            android:text="@string/search_details"
             android:textColor="@color/avatellSplashPageText"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -87,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10sp"
                 android:layout_weight="1"
-                android:text="Customer"
+                android:text="@string/customer"
                 android:textSize="18sp"
                 android:textColor="@color/avatellSplashPageText" />
             <TextView
@@ -95,7 +95,7 @@
                 android:layout_weight="1"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:text="Customer"
+                android:text="@string/customer"
                 android:textSize="18sp"
                 android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
@@ -110,7 +110,7 @@
                 android:layout_weight="1"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:text="Currency"
+                android:text="@string/currency"
                 android:textSize="18sp"
                 android:textColor="@color/avatellSplashPageText"
                 android:layout_marginLeft="10sp"/>
@@ -119,7 +119,7 @@
                 android:layout_weight="1"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:text="Currency"
+                android:text="@string/currency"
                 android:textSize="18sp"
                 android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
@@ -134,7 +134,7 @@
             android:layout_weight="1"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
-            android:text="Order Amount"
+            android:text="@string/order_amount"
             android:textSize="18sp"
             android:textColor="@color/avatellSplashPageText"
             android:layout_marginLeft="10sp"/>
@@ -143,7 +143,7 @@
             android:layout_weight="1"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
-            android:text="Order Amount"
+            android:text="@string/order_amount"
             android:textSize="18sp"
             android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
@@ -158,7 +158,7 @@
             android:layout_weight="1"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
-            android:text="Exempt Amount"
+            android:text="@string/exempt_amount"
             android:textSize="18sp"
             android:textColor="@color/avatellSplashPageText"
             android:layout_marginLeft="10sp"/>
@@ -167,7 +167,7 @@
             android:layout_weight="1"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
-            android:text="Exempt Amount"
+            android:text="@string/exempt_amount"
             android:textSize="18sp"
             android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>
@@ -182,7 +182,7 @@
             android:layout_weight="1"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
-            android:text="Taxable Amount"
+            android:text="@string/taxable_amount"
             android:textSize="18sp"
             android:textColor="@color/avatellSplashPageText"
             android:layout_marginLeft="10sp"/>
@@ -191,7 +191,7 @@
             android:layout_weight="1"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
-            android:text="Taxable Amount"
+            android:text="@string/taxable_amount"
             android:textSize="18sp"
             android:textColor="@color/avatellSplashPageText" />
         </LinearLayout>

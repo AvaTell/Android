@@ -7,6 +7,16 @@
     android:background="@color/avatellBackground"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/aboutUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/avatellBackground"
+        android:text="About Us"
+        android:textAlignment="textStart"
+        android:textColor="@color/avatellSplashPageText"
+        android:textSize="12sp"
+        android:layout_marginLeft="10sp"/>
 
     <TextView
         android:id="@+id/textView"

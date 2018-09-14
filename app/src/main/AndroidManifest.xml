@@ -22,6 +22,8 @@
         <activity android:name=".API" />
         <activity android:name=".login" />
         <activity android:name=".ResponseAPI"></activity>
+        <activity android:name=".AboutUs"></activity>
+
     </application>
 
 </manifest>
