@@ -212,10 +212,12 @@ public class ResponseAPI extends AppCompatActivity {
                         Gson gson = new Gson();
                         TaxRateByTaxCode parsedResponse = gson.fromJson(response, TaxRateByTaxCode.class);
 
+                        double taxRate = (parsedResponse.totalTaxable/parsedResponse.totalTax);
+                        String taxRateClipped = String.valueOf(taxRate).substring(0, 6);
                         // Display the first 500 characters of the response string.
                         //mTextViewLong.setText(response);
                         mTextViewLong.setText("Your total tax rate is:");
-                        mTotalTaxResponse.setText(parsedResponse.totalTax + "%");
+                        mTotalTaxResponse.setText(taxRateClipped + "%");
 
                         //Setting up Detail area of response
                         mCustomerCode.setText(parsedResponse.customerCode);

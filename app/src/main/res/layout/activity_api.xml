@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10sp"
         android:layout_marginTop="10sp"
-        android:text="Search For a Tax Rate by Zip Code"
+        android:text="@string/search_for_a_tax_rate_by_zip_code"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/avatellSplashPageText"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="10sp"
         android:layout_marginTop="10sp"
-        android:text="Search For a Tax Rate by Zip Code"
+        android:text="@string/search_for_a_tax_rate_by_zip_code"
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/avatellSplashPageText"
@@ -106,8 +106,10 @@
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/longForm"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rateByZip" />
 
 
@@ -115,9 +117,10 @@
         android:id="@+id/longForm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:orientation="vertical"
-        android:layout_marginTop="10sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textOr">
 
@@ -125,67 +128,72 @@
             android:id="@+id/companyCodeInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SELFEMPLOYED"
-            android:hint="@string/company"
+            android:layout_marginBottom="5sp"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
-            android:layout_marginBottom="5sp"
             android:background="@color/avatellSecondaryBackground"
-            android:inputType="text" />
+            android:hint="@string/company"
+            android:padding="5sp"
+            android:inputType="text"
+            android:text="SELFEMPLOYED" />
 
         <EditText
             android:id="@+id/customerCodeInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ABC"
-            android:hint="@string/customer"
+            android:layout_marginBottom="5sp"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
-            android:layout_marginBottom="5sp"
             android:background="@color/avatellSecondaryBackground"
-            android:inputType="text" />
+            android:hint="@string/customer"
+            android:padding="5sp"
+            android:inputType="text"
+            android:text="ABC" />
 
         <LinearLayout
             android:id="@+id/zipamtqty"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="5sp">
+            android:layout_marginBottom="5sp"
+            android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/taxZipCodeInput"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="98125"
-                android:hint="@string/zip"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="5sp"
+                android:layout_weight="1"
                 android:background="@color/avatellSecondaryBackground"
-                android:inputType="text" />
+                android:hint="@string/zip"
+                android:padding="5sp"
+                android:inputType="text"
+                android:text="98125" />
 
             <EditText
                 android:id="@+id/amountInput"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="100"
-                android:hint="@string/amount"
-                android:background="@color/avatellSecondaryBackground"
                 android:layout_marginRight="5sp"
-                android:inputType="text" />
+                android:layout_weight="1"
+                android:background="@color/avatellSecondaryBackground"
+                android:hint="@string/amount"
+                android:padding="5sp"
+                android:inputType="text"
+                android:text="100" />
 
 
             <EditText
                 android:id="@+id/quantityInput"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="100"
-                android:hint="@string/quantity"
                 android:layout_marginRight="10sp"
+                android:layout_weight="1"
                 android:background="@color/avatellSecondaryBackground"
-                android:inputType="text" />
+                android:hint="@string/quantity"
+                android:padding="5sp"
+                android:inputType="text"
+                android:text="100" />
 
         </LinearLayout>
 
@@ -199,24 +207,26 @@
                 android:id="@+id/taxCodeInput"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="PC040100"
-                android:hint="@string/taxcode"
                 android:layout_marginLeft="10sp"
                 android:layout_marginRight="5sp"
+                android:layout_weight="1"
                 android:background="@color/avatellSecondaryBackground"
-                android:inputType="text" />
+                android:hint="@string/taxcode"
+                android:padding="5sp"
+                android:inputType="text"
+                android:text="PC040100" />
 
             <EditText
                 android:id="@+id/descriptionInput"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="clothing"
-                android:hint="@string/description"
                 android:layout_marginRight="10sp"
+                android:layout_weight="2"
                 android:background="@color/avatellSecondaryBackground"
-                android:inputType="text" />
+                android:hint="@string/description"
+                android:padding="5sp"
+                android:inputType="text"
+                android:text="clothing" />
 
         </LinearLayout>
 
