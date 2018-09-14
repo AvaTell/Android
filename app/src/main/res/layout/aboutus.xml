@@ -31,21 +31,52 @@
         app:layout_constraintTop_toBottomOf="@id/groupPhoto"
         app:layout_constraintBottom_toBottomOf="parent">
 
+
         <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+<!--PANOS-->
+        <LinearLayout
+            android:id="@+id/panosSection"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10sp">
 
-<!--PANOS-->
-            <TextView
-                android:id="@+id/panos"
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/panos"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/avatellSplashPageText" />
+                android:layout_marginBottom="5sp"
+                android:background="@color/avatellSecondaryBackground">
+
+                <TextView
+                    android:id="@+id/panos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="@string/panos"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/avatellBackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/github"
+                        android:layout_marginRight="2sp"
+                        android:tag="https://github.com/spinaltaper" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/linkedin"
+                        android:tag="https://www.linkedin.com/in/panos-kumasaka/" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -53,16 +84,49 @@
                 android:text="@string/panos_profile"
                 android:textAlignment="textStart"
                 android:textColor="@color/avatellSplashPageText" />
+        </LinearLayout>
+
 
 <!--PAUL-->
-            <TextView
-                android:id="@+id/paul"
+        <LinearLayout
+            android:id="@+id/paulSection"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp">
+
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/paul"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/avatellSplashPageText" />
+                android:layout_marginBottom="5sp"
+                android:background="@color/avatellSecondaryBackground">
+
+                <TextView
+                    android:id="@+id/paul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="@string/paul"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/avatellBackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/github"
+                    android:layout_marginRight="2sp"
+                    android:tag="https://github.com/PaulSuarez1" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/linkedin"
+                    android:tag="https://www.linkedin.com/in/paulsuarezsales/" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -70,16 +134,48 @@
                 android:text="@string/paul_profile"
                 android:textAlignment="textStart"
                 android:textColor="@color/avatellSplashPageText" />
+        </LinearLayout>
 
-<!--AMY-->
-            <TextView
-                android:id="@+id/amy"
+            <!--AMY-->
+        <LinearLayout
+            android:id="@+id/amySection"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp">
+
+            <LinearLayout
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/amy"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/avatellSplashPageText" />
+                android:layout_marginBottom="5sp"
+                android:background="@color/avatellSecondaryBackground">
+
+                <TextView
+                    android:id="@+id/amy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:text="@string/amy"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/avatellBackground"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/github"
+                    android:layout_marginRight="2sp"
+                    android:tag="https://github.com/AmyCohen" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/linkedin"
+                    android:tag="https://www.linkedin.com/in/amyvcohen/" />
+
+            </LinearLayout>
 
             <TextView
                 android:layout_width="match_parent"
@@ -87,7 +183,9 @@
                 android:text="@string/amy_profile"
                 android:textAlignment="textStart"
                 android:textColor="@color/avatellSplashPageText" />
+        </LinearLayout>
 
         </LinearLayout>
+
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
