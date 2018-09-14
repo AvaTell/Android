@@ -56,7 +56,6 @@ public class Parser{
                 newVals.add(curr);
             }
         }
-        this.currVals = newVals;
         return newVals;
     }
 

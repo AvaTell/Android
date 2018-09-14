@@ -134,8 +134,7 @@
             android:background="@color/avatellSecondaryBackground"
             android:hint="@string/company"
             android:padding="10sp"
-            android:inputType="text"
-            android:text="SELFEMPLOYED" />
+            android:inputType="text"/>
 
         <EditText
             android:id="@+id/customerCodeInput"
@@ -147,8 +146,7 @@
             android:background="@color/avatellSecondaryBackground"
             android:hint="@string/customer"
             android:padding="10sp"
-            android:inputType="text"
-            android:text="ABC" />
+            android:inputType="text"/>
 
         <LinearLayout
             android:id="@+id/zipamtqty"
@@ -167,8 +165,7 @@
                 android:background="@color/avatellSecondaryBackground"
                 android:hint="@string/zip"
                 android:padding="10sp"
-                android:inputType="text"
-                android:text="98125" />
+                android:inputType="text"/>
 
             <EditText
                 android:id="@+id/amountInput"
@@ -179,8 +176,7 @@
                 android:background="@color/avatellSecondaryBackground"
                 android:hint="@string/amount"
                 android:padding="10sp"
-                android:inputType="text"
-                android:text="100" />
+                android:inputType="text"/>
 
 
             <EditText
@@ -192,8 +188,7 @@
                 android:background="@color/avatellSecondaryBackground"
                 android:hint="@string/quantity"
                 android:padding="10sp"
-                android:inputType="text"
-                android:text="100" />
+                android:inputType="text"/>
 
         </LinearLayout>
 
@@ -203,7 +198,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <EditText
+            <AutoCompleteTextView
                 android:id="@+id/taxCodeInput"
                 android:layout_width="0sp"
                 android:layout_height="wrap_content"
@@ -213,8 +208,7 @@
                 android:background="@color/avatellSecondaryBackground"
                 android:hint="@string/taxcode"
                 android:padding="10sp"
-                android:inputType="text"
-                android:text="PC040100" />
+                android:inputType="text"/>
 
             <EditText
                 android:id="@+id/descriptionInput"
@@ -225,11 +219,13 @@
                 android:background="@color/avatellSecondaryBackground"
                 android:hint="@string/description"
                 android:padding="10sp"
-                android:inputType="text"
-                android:text="clothing" />
+                android:inputType="text"/>
 
         </LinearLayout>
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchResults"/>
     </LinearLayout>
 
         <ImageButton
